@@ -1,0 +1,89 @@
+.details-container {
+    /* margin-left: 20px; */
+}
+
+.details-container {
+    position: relative;
+    width: 300px;
+    background: #c7cc81;
+    border-radius: 6px;
+}
+
+.user-details {
+    border: 1px solid #1900ff;
+    /* padding: 10px; */
+    width: 300px;
+
+    border-radius: 6px;
+}
+
+.user-details h2 {
+    padding: 10px 20px;
+    text-align: left;
+}
+
+.user-foto {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+
+    /* aspect-ratio: 1/1; */
+}
+
+.user-foto img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    border-radius: 6px 6px 0px 0px;
+}
+
+.user-content p {
+    padding: 10px 20px;
+    border-top: 1px solid #1900ff;
+    text-align: left;
+}
+
+.loading-animation {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-2.5em, -50%);
+
+    /* margin-top: calc(50% + 1em);
+    margin-left: calc(50% - 2.5em); */
+
+    width: 2em;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.loading-animation::after {
+    content: "Загрузка";
+    /* Начальный текст */
+    animation: loading 1s infinite;
+    /* Применяем анимацию с бесконечным повторением */
+}
+
+@keyframes loading {
+    0% {
+        content: "Загрузка";
+    }
+
+    25% {
+        content: "Загрузка.";
+    }
+
+    50% {
+        content: "Загрузка..";
+    }
+
+    75% {
+        content: "Загрузка...";
+    }
+}

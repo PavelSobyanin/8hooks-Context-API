@@ -1,0 +1,89 @@
+.json-fetch__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+
+    margin-top: 15px;
+}
+
+.json-fetch__data {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 300px;
+    background: #ffffff;
+}
+
+.json-fetch__data h3 {
+    display: flex;
+    width: 100%;
+    padding: 15px;
+    min-height: 90px;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.json-fetch__content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90px;
+    width: 100%;
+}
+
+.json-fetch_item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.json-fetch__error {
+    color: red;
+}
+
+.json-fetch__data {
+    color: green;
+}
+
+.json-fetch__loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-3em, -50%);
+
+    color: #acac00;
+
+    width: 4em;
+}
+
+.json-fetch__loader::after {
+    content: "Загрузка";
+    /* Начальный текст */
+    animation: loading2 1s infinite;
+    /* Применяем анимацию с бесконечным повторением */
+}
+
+@keyframes loading2 {
+    0% {
+        content: "Загрузка";
+    }
+
+    25% {
+        content: "Загрузка.";
+    }
+
+    50% {
+        content: "Загрузка..";
+    }
+
+    75% {
+        content: "Загрузка...";
+    }
+}
